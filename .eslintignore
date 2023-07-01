@@ -4,3 +4,11 @@ yarn.lock
 yarn-error.log
 logs
 coverage
+cache
+.cache
+package.json
+package-lock.json
+public
+.yarn
+.next
+build
