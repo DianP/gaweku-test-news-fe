@@ -8,23 +8,23 @@
   }
 
   &_destructive {
-    @apply bg-red-500 text-zinc-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-red-50 dark:hover:bg-red-900/90;
+    @apply bg-red-500 text-zinc-50 hover:bg-red-500/90;
   }
 
   &_outline {
-    @apply border border-zinc-200 bg-white hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50;
+    @apply border border-zinc-200 bg-white hover:bg-zinc-100 hover:text-zinc-900;
   }
 
   &_secondary {
-    @apply bg-zinc-100 text-zinc-900 hover:bg-zinc-100/80 dark:bg-zinc-800 dark:text-zinc-50 dark:hover:bg-zinc-800/80;
+    @apply bg-zinc-100 text-zinc-900 hover:bg-zinc-100/80;
   }
 
   &_ghost {
-    @apply hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50;
+    @apply hover:bg-zinc-100 hover:text-zinc-900;
   }
 
   &_link {
-    @apply text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-50;
+    @apply text-zinc-900 underline-offset-4 hover:underline;
   }
 }
 
