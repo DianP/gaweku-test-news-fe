@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${fontSans.variable} ${fontSerif.variable}`} suppressHydrationWarning>
       <body className="flex min-h-screen flex-col bg-white text-zinc-950 antialiased transition-colors dark:bg-zinc-950 dark:text-white">

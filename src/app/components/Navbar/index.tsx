@@ -1,7 +1,7 @@
 import { Button, Logo, Separator, SidebarMenu, ThemeToggle, WeatherWidget } from '@components';
 import { IconHome, IconMenu2, IconSearch } from '@tabler/icons-react';
 import Link from 'next/link';
-import { Suspense } from 'react';
+import React from 'react';
 
 export const Navbar = () => {
   return (
@@ -30,9 +30,7 @@ export const Navbar = () => {
                 </SidebarMenu>
               </div>
               <div className="hidden md:block">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <WeatherWidget />
-                </Suspense>
+                <WeatherWidget />
               </div>
             </div>
           </div>

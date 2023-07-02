@@ -1,5 +1,3 @@
-'use server';
-
 import { Button, Logo, Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, WeatherWidget } from '@components';
 import { IconBrandGithub, IconHeartFilled } from '@tabler/icons-react';
 import Link from 'next/link';
