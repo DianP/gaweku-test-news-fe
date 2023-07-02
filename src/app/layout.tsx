@@ -1,11 +1,12 @@
-import '@styles/globals.scss';
-
+import '@styles/globals.css';
+import { Navbar, ThemeProvider } from '@components';
+import { appConfig } from '@config';
+import { fontSans, fontSerif } from '@styles';
 import { Metadata } from 'next';
 
-import { appConfig } from '@config/app';
-import { fontSans } from '@lib/fonts';
-import { cn } from '@lib/utils';
-import { ThemeProvider } from '@components/theme-provider';
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
 
 export const metadata: Metadata = {
   title: {
@@ -19,27 +20,18 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
   },
 };
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
-
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
-      <body
-        className={cn(
-          'min-h-screen bg-white dark:bg-zinc-950 font-sans antialiased transition-colors text-zinc-950 dark:text-white',
-          fontSans.variable
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex-1">{children}</div>
+    <html lang="en" className={`${fontSans.variable} ${fontSerif.variable}`} suppressHydrationWarning>
+      <body className="flex min-h-screen flex-col bg-white text-zinc-900 antialiased transition-colors dark:bg-zinc-950 dark:text-white">
+        <ThemeProvider attribute="class" defaultTheme="white" enableSystem>
+          <Navbar />
+          <div className="container grid grid-cols-12 pt-[158px]">
+            <div className="col-span-full mt-16 flex flex-col gap-16 2xl:col-span-10 2xl:col-start-2">{children}</div>
+          </div>
         </ThemeProvider>
       </body>
     </html>

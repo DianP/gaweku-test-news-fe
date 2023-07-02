@@ -33,9 +33,11 @@ module.exports = {
       '3xl': '1536px',
     },
     colors: {
-      transparent: 'transparent',
+      inherit: 'inherit',
       current: 'currentColor',
-      white: '#ffffff',
+      transparent: 'transparent',
+      black: '#000',
+      white: '#fff',
       blue: {
         DEFAULT: '#2446FB',
         50: '#D8DEFE',
