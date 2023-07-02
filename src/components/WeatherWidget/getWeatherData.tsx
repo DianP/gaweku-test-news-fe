@@ -31,7 +31,9 @@ async function getWeatherData(query: string): Promise<WeatherDataProps> {
   //simulate slow network
   // await new Promise((resolve) => setTimeout(resolve, 5000));
 
-  const res = await fetch(`${WeatherAPI_URL}/current.json?key=${WeatherAPI_KEY}&q=${query}&aqi=no`);
+  const res = await fetch(`${WeatherAPI_URL}/current.json?key=${WeatherAPI_KEY}&q=${query}&aqi=no`, {
+    cache: 'no-store',
+  });
 
   return res.json();
 }
