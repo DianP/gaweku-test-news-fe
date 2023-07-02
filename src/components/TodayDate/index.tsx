@@ -6,8 +6,20 @@ import React from 'react';
 
 export const TodayDate = () => {
   const headersList = headers();
-  const referer = headersList.get('x-vercel-ip-country');
-  console.log(referer);
+
+  const ip = headersList.get('x-vercel-ip');
+  const forwardedFor = headersList.get('x-forwarded-for');
+  const country = headersList.get('x-vercel-ip-country');
+  const city = headersList.get('x-vercel-ip-city');
+  const latidude = headersList.get('x-vercel-ip-latidude');
+  const longitude = headersList.get('x-vercel-ip-longitude');
+
+  console.log('ip', ip);
+  console.log('forwardedFor', forwardedFor);
+  console.log('country', country);
+  console.log('city', city);
+  console.log('latidude', latidude);
+  console.log('longitude', longitude);
 
   const day = moment().format('dddd,');
   const date = moment().format('DD MMMM YYYY');
