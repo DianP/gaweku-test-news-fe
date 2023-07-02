@@ -1,6 +1,7 @@
-import { Button, Logo, Separator, SidebarMenu, ThemeToggle, TodayDate } from '@components';
+import { Button, Logo, Separator, SidebarMenu, ThemeToggle, WeatherWidget } from '@components';
 import { IconHome, IconMenu2, IconSearch } from '@tabler/icons-react';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 export const Navbar = () => {
   return (
@@ -29,11 +30,13 @@ export const Navbar = () => {
                 </SidebarMenu>
               </div>
               <div className="hidden md:block">
-                <TodayDate />
+                <Suspense fallback={<div>Loading...</div>}>
+                  <WeatherWidget />
+                </Suspense>
               </div>
             </div>
           </div>
-          <div className="items-center justify-between gap-4 border-t border-zinc-200 py-4 dark:border-zinc-800 flex">
+          <div className="flex items-center justify-between gap-4 border-t border-zinc-200 py-4 dark:border-zinc-800">
             <div className="flex h-full items-center gap-4">
               <Link href="/">
                 <Button variant="outline" size="icon">

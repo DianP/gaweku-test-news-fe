@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${fontSans.variable} ${fontSerif.variable}`} suppressHydrationWarning>
-      <body className="flex min-h-screen flex-col bg-white text-zinc-900 antialiased transition-colors dark:bg-zinc-950 dark:text-white">
+      <body className="flex min-h-screen flex-col bg-white text-zinc-950 antialiased transition-colors dark:bg-zinc-950 dark:text-white">
         <ThemeProvider attribute="class" defaultTheme="white" enableSystem>
           <Navbar />
           <div className="container grid grid-cols-12 pt-[158px]">

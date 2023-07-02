@@ -1,6 +1,6 @@
 'use server';
 
-import { Button, Logo, Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, TodayDate } from '@components';
+import { Button, Logo, Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, WeatherWidget } from '@components';
 import { IconBrandGithub, IconHeartFilled } from '@tabler/icons-react';
 import Link from 'next/link';
 import React from 'react';
@@ -20,8 +20,8 @@ export async function SidebarMenu({ children }: SidebarProps) {
           </SheetTitle>
         </SheetHeader>
         <div className="flex flex-col h-full w-full gap-6 py-6">
-          <div className="flex flex-col w-full">
-            <TodayDate />
+          <div className="flex flex-col w-full border-b border-zinc-200 dark:border-zinc-800 pb-6">
+            <WeatherWidget />
           </div>
 
           <div className="border-t border-zinc-200 dark:border-zinc-800 p-6 absolute bottom-0 w-full left-0 bg-white dark:bg-zinc-950">

@@ -8,4 +8,4 @@ export * from './Separator';
 export * from './DropdownMenu';
 export * from './Sheet';
 export * from './SidebarMenu';
-export * from './TodayDate';
+export * from './WeatherWidget';
