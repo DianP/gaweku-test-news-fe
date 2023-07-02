@@ -21,8 +21,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@components": ["./src/app/components"],
-      "@components/*": ["./src/app/components/*"],
+      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"],
       "@config": ["./src/config"],
       "@config/*": ["./src/config/*"],
       "@lib": ["./src/lib"],

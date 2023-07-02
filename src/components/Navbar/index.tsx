@@ -1,7 +1,16 @@
 import { Button, Logo, Separator, SidebarMenu, ThemeToggle, WeatherWidget } from '@components';
 import { IconHome, IconMenu2, IconSearch } from '@tabler/icons-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
+
+const ActiveLink = () => {
+  'use client';
+  const pathname = usePathname();
+  const active = pathname.startsWith('/') ? (true as boolean) : (false as boolean);
+
+  return active as boolean;
+};
 
 export const Navbar = () => {
   return (
@@ -36,23 +45,23 @@ export const Navbar = () => {
           </div>
           <div className="flex items-center justify-between gap-4 border-t border-zinc-200 py-4 dark:border-zinc-800">
             <div className="flex h-full items-center gap-4">
-              <Link href="/">
-                <Button variant="outline" size="icon">
+              <Button variant="outline" size="icon" asChild>
+                <Link href="/">
                   <IconHome size={20} />
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
             <Separator orientation="vertical" />
             <div className="flex w-full items-center gap-8">
-              <Link href="/">
-                <Button variant="link" size="link" asChild>
+              <Button variant="link" size="link" asChild active={ActiveLink}>
+                <Link href="/">
                   <span>Home</span>
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
             <Separator orientation="vertical" />
             <div className="flex items-center gap-4">
-              <Button variant="outline" size="icon">
+              <Button variant="outline" size="icon" className="hidden">
                 <IconSearch size={20} />
               </Button>
               <ThemeToggle />

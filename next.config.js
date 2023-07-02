@@ -12,6 +12,10 @@ const nextConfig = {
         port: '',
         pathname: '/weather/**',
       },
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
     ],
   },
 };

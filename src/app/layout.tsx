@@ -1,5 +1,5 @@
 import '@styles/globals.css';
-import { Navbar, ThemeProvider } from '@components';
+import { Footer, Navbar, ThemeProvider } from '@components';
 import { appConfig } from '@config';
 import { fontSans, fontSerif } from '@styles';
 import { Metadata } from 'next';
@@ -10,7 +10,7 @@ interface RootLayoutProps {
 
 export const metadata: Metadata = {
   title: {
-    default: appConfig.name,
+    default: `${appConfig.name} - News Aggregator`,
     template: `%s - ${appConfig.name}`,
   },
   description: appConfig.description,
@@ -32,6 +32,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           <div className="container grid grid-cols-12 pt-[158px]">
             <div className="col-span-full mt-16 flex flex-col gap-16 2xl:col-span-10 2xl:col-start-2">{children}</div>
           </div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

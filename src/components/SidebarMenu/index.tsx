@@ -18,7 +18,7 @@ export async function SidebarMenu({ children }: SidebarProps) {
           </SheetTitle>
         </SheetHeader>
         <div className="flex flex-col h-full w-full gap-6 py-6">
-          <div className="flex flex-col w-full border-b border-zinc-200 dark:border-zinc-800 pb-6">
+          <div className="flex flex-col w-full border-b border-zinc-200 dark:border-zinc-800 pb-6 justify-center">
             <WeatherWidget />
           </div>
 

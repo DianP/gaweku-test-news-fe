@@ -1,21 +1,21 @@
 import { Separator } from '@components';
+import { getHttpHeaders } from '@lib';
 import { IconMapPin } from '@tabler/icons-react';
 import moment from 'moment';
 import Image from 'next/image';
 import React, { Suspense } from 'react';
 import { getWeatherData } from './getWeatherData';
-import { getHttpHeaders } from './httpHeaders';
 
 async function WeatherWidget() {
   const httpHeaders = await getHttpHeaders();
 
-  if (httpHeaders?.httpHeaders.forwardedFor) {
-    const res = await getWeatherData(httpHeaders?.httpHeaders.forwardedFor);
+  if (httpHeaders?.httpHeaders.city) {
+    const res = await getWeatherData(httpHeaders?.httpHeaders.city);
     const day = moment(new Date(res.location.localtime)).format('dddd,');
     const date = moment(new Date(res.location.localtime)).format('DD MMMM YYYY');
 
     return (
-      <Suspense fallback={<div>Loading Widget</div>}>
+      <Suspense fallback={<div>Loading Widget...</div>}>
         <div className="flex items-center justify-between gap-4 border-zinc-200 dark:border-zinc-800">
           <div className="flex items-center gap-2">
             <div className="relative aspect-square w-10 h-10">
@@ -42,13 +42,13 @@ async function WeatherWidget() {
     );
   }
 
-  if (httpHeaders?.httpHeaders.city) {
-    const res = await getWeatherData(httpHeaders?.httpHeaders.city);
+  if (httpHeaders?.httpHeaders.country) {
+    const res = await getWeatherData(httpHeaders?.httpHeaders.country);
     const day = moment(new Date(res.location.localtime)).format('dddd,');
     const date = moment(new Date(res.location.localtime)).format('DD MMMM YYYY');
 
     return (
-      <Suspense fallback={<div>Loading Widget</div>}>
+      <Suspense fallback={<div>Loading Widget...</div>}>
         <div className="flex items-center justify-between gap-4 border-zinc-200 dark:border-zinc-800">
           <div className="flex items-center gap-2">
             <div className="relative aspect-square w-10 h-10">
@@ -79,8 +79,8 @@ async function WeatherWidget() {
   const date = moment(new Date()).format('DD MMMM YYYY');
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <div className="flex gap-1 text-zinc-950 dark:text-white">
+    <Suspense fallback={<div>Loading Widget...</div>}>
+      <div className="flex gap-1 text-zinc-950 dark:text-white justify-center">
         <span className="text-sm font-bold">{day}</span>
         <span className="text-sm">{date}</span>
       </div>
