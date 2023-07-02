@@ -25,6 +25,10 @@ export const Navbar = () => {
                   <Button variant="outline" size="default">
                     <IconMenu2 size={20} />
                     Menu
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                    </span>
                   </Button>
                 </SidebarMenu>
               </div>
@@ -35,6 +39,10 @@ export const Navbar = () => {
                   <Button variant="outline" size="default">
                     <IconMenu2 size={20} />
                     Menu
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                    </span>
                   </Button>
                 </SidebarMenu>
               </div>
