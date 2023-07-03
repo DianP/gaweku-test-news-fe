@@ -1,2 +1,2 @@
-export * from './ClassName';
+export * from './classMerge';
 export * from './getFavicon';

@@ -1,5 +1,3 @@
-'use server';
-
 import type { NewsResponse } from '@types';
 
 export interface GetNewsQuery {
@@ -25,12 +23,13 @@ export async function getNews({
   url += search === null ? '' : `&search=${search}`;
 
   const res = await fetch(url, {
-    cache: 'no-store',
+    next: { revalidate: 60 },
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   });
+
   const data = await res.json();
 
   return data;

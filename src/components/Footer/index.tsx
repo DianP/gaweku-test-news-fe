@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@components';
 import { IconBrandGithub, IconHeartFilled } from '@tabler/icons-react';
 import Link from 'next/link';

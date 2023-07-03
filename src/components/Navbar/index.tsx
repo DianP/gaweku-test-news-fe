@@ -1,16 +1,7 @@
-import { Button, Logo, Separator, SidebarMenu, ThemeToggle, WeatherWidget } from '@components';
+import { Button, Logo, NavLink, Separator, SidebarMenu, ThemeToggle, WeatherWidget } from '@components';
 import { IconHome, IconMenu2, IconSearch } from '@tabler/icons-react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import React from 'react';
-
-const ActiveLink = () => {
-  'use client';
-  const pathname = usePathname();
-  const active = pathname.startsWith('/') ? (true as boolean) : (false as boolean);
-
-  return active as boolean;
-};
 
 export const Navbar = () => {
   return (
@@ -61,11 +52,7 @@ export const Navbar = () => {
             </div>
             <Separator orientation="vertical" />
             <div className="flex w-full items-center gap-8">
-              <Button variant="link" size="link" asChild active={ActiveLink}>
-                <Link href="/">
-                  <span>Home</span>
-                </Link>
-              </Button>
+              <NavLink href="/">Home</NavLink>
             </div>
             <Separator orientation="vertical" />
             <div className="flex items-center gap-4">

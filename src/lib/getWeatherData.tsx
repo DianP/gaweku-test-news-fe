@@ -1,5 +1,3 @@
-'use server';
-
 interface WeatherDataProps {
   location: {
     name: string;
@@ -29,7 +27,7 @@ async function getWeatherData(query: string): Promise<WeatherDataProps> {
   const WeatherAPI_KEY = process.env.WEATHERAPI_API_KEY;
 
   //simulate slow network
-  // await new Promise((resolve) => setTimeout(resolve, 5000));
+  //await new Promise((resolve) => setTimeout(resolve, 5000));
 
   const res = await fetch(`${WeatherAPI_URL}/current.json?key=${WeatherAPI_KEY}&q=${query}&aqi=no`, {
     cache: 'no-store',

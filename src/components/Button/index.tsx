@@ -1,3 +1,5 @@
+'use client';
+
 import { Slot } from '@radix-ui/react-slot';
 import { cn } from '@utils';
 import { cva } from 'class-variance-authority';

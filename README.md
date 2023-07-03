@@ -9,11 +9,11 @@ This project is built using [Next.js 13](https://nextjs.org/) app router, [Tailw
 
 ## Requirements
 
-| Name            | Version  | Note     |
-| --------------- | -------- | -------- |
-| Node            | ^18.16.1 |          |
-| NPM             | ^9.5.1   |          |
-| Gaweku News API | ^0.1.0   | Required |
+| Name                                                              | Version  | Note     |
+| ----------------------------------------------------------------- | -------- | -------- |
+| Node                                                              | ^18.16.1 |          |
+| NPM                                                               | ^9.5.1   |          |
+| [Gaweku News API](https://github.com/DianP/gaweku-test-news-api/) | ^0.1.0   | Required |
 
 ### Other Dependencies
 
@@ -39,10 +39,4 @@ WEATHERAPI_API_KEY=''
 
 ## Screenshots
 
-### Home Page
-
-### Category Page
-
-### Search Page
-
-### Detail Page
+![screencapture-gaweku-news-dt-vg-2023-07-03-11_30_09](https://github.com/DianP/gaweku-test-news-fe/assets/34946363/a69e09ae-0a37-4c46-a24a-49d1c2bcf534)

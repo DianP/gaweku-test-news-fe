@@ -1,5 +1,3 @@
-'use static';
-
 import { formatDateWithTimezone } from '@/utils/formatDate';
 import { NewsThumbnail } from '@components';
 import { getHttpHeaders } from '@lib';
