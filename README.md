@@ -13,7 +13,7 @@ This project is built using [Next.js 13](https://nextjs.org/) app router, [Tailw
 | ----------------------------------------------------------------- | -------- | -------- |
 | Node                                                              | ^18.16.1 |          |
 | NPM                                                               | ^9.5.1   |          |
-| [Gaweku News API](https://github.com/DianP/gaweku-test-news-api/) | ^0.1.0   | Required |
+| [News Aggregator API](https://github.com/DianP/gaweku-test-news-api/) | ^0.1.0   | Required |
 
 ### Other Dependencies
 
