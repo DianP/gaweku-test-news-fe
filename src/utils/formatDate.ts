@@ -2,7 +2,7 @@ import moment from 'moment';
 import 'moment-timezone';
 
 export const formatDateWithTimezone = (date: string, timezone: string) => {
-  const timeZ = timezone ? timezone : 'Asia/Jakarta';
+  const timeZ = timezone ? timezone : 'Atlantic/Reykjavik';
 
   const now = moment().tz(timeZ);
   const targetDate = moment(date).tz(timeZ);
@@ -10,6 +10,6 @@ export const formatDateWithTimezone = (date: string, timezone: string) => {
   if (now.diff(targetDate, 'hours') < 24) {
     return targetDate.fromNow();
   } else {
-    return targetDate.format('DD MMMM YYYY');
+    return targetDate.format('DD MMMM YYYY, h:mm z');
   }
 };
